@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+<body>
+    {% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
+
+    <h1>Welcome Everyone</h1>
+    {% comment %}
+    <h1>Welcome ladies and gentlemen</h1>
+    {% endcomment %}
+
+    <table border='1'>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        {% for x in mymembers %}
+        <tr {% if x.firstname == 'Test' %} style='background-color:rgb(225, 228, 59);' {% endif %}>
+            <td>{{ x.id }}</td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+    <!-- <p>In views.py you can see what the fruits variable looks like.</p> -->
+
+    <p>This page contains a footer in a template.</p>
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>
