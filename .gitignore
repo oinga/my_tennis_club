@@ -1,0 +1,47 @@
+# Ignore the settings.py file
+my_tennis_club/my_tennis_club/settings.py
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+/static/
+/media/
+/venv/
+env/
+venv*/
+.env
+
+# Environment files
+.env
+*.env
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# PostgreSQL (optional, if using local database)
+*.psql
+*.pgpass
