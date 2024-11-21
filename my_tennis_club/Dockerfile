@@ -18,7 +18,8 @@ RUN apt-get update && apt-get install -y \
 
 # Copy requirements.txt and install Python dependencies
 COPY app/requirements.txt ./app/requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the entire project into the container
 COPY . /app/
