@@ -26,6 +26,9 @@ RUN pip install --no-cache-dir whitenoise==6.7.0
 # Copy the entire project into the container
 COPY . /app/
 
+# Check the files in /app/ (useful for debugging)
+RUN ls /app
+
 # Collect static files
 RUN python manage.py collectstatic --noinput
 
